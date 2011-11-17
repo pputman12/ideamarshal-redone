@@ -1,0 +1,10 @@
+<div class="middle_wrapper">
+  <ul class="pictures">
+    <% @portfolios.each do |portfolio| %>
+      <li class="picture">
+        <%= image_tag portfolio.picture %>
+        <%= portfolio.caption %>
+      </li>
+    <% end %>
+  <ul>
+</div>

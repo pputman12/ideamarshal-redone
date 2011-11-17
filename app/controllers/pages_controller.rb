@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
   # GET /pages
   # GET /pages.json
+  before_filter :new_feedback
+  
   def index
     @pages = Page.all
 
@@ -14,7 +16,6 @@ class PagesController < ApplicationController
   # GET /pages/1.json
   def show
     @page = Page.where(["LOWER(title) = ?", params[:id].gsub('-', ' ').downcase]).first
-    @feedback = Feedback.new
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @page }
@@ -23,7 +24,6 @@ class PagesController < ApplicationController
   
   def home
     @page = Page.find_by_title("Home")
-    @feedback = Feedback.new
     render :action => :show
   end
 

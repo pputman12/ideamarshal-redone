@@ -1,4 +1,6 @@
 Ideam::Application.routes.draw do
+  resources :portfolios
+
   resources :feedbacks
 
   resources :pages

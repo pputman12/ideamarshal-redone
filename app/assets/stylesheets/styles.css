@@ -251,6 +251,35 @@ ul.featured_services h3 {
 	text-indent: 40px;
 }
 
+.middle_wrapper {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+
+.middle_wrapper h3{
+  font-size: 25px;
+  color: #168FAD;
+}
+
+
+ul.pictures {
+	clear: both;
+	height: 240px;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: inline;
+}
+
+ul.pictures li {
+	width: 300px;
+	margin: 0 10px;
+}
+
 ul.featured_services li.service_1 h3 {
 	background: url('images/icn_service_1.png') no-repeat; background-position: 0 10px;
 }

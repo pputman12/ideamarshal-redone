@@ -22,7 +22,7 @@
         <%= link_to "Contact", page_path("Contact") %>
       </li>
       <li>
-        <%= link_to "Portfolio", page_path("Portfolio") %>
+        <%= link_to "Portfolio", portfolios_path %>
       </li>
     </ul>
   </div>
@@ -43,9 +43,7 @@
 						<li><strong>@MediaLoot</strong> Curabitur blandit tempus porttitor estibulum venenatis ultricies.</li>
 						<li><strong>@MediaLoot</strong> Curabitur blandit tempus porttitor estibulum venenatis ultricies.</li>
 					</ul>
-					<div class="button_1">
-					  <%= link_to "Read More", root_path %>
-					</div>
+					<%= link_to "Read More", root_path, :class => "button_1" %>
 				</article>
 			</div>
 			
@@ -81,7 +79,7 @@
 				    <%= f.text_field :name, :value=>"Your Name" %>
 				    <%= f.text_field :email, :value=>"Your Email"%>
 				    <%= f.text_area :message, :value=>"Your Message"%>
-				    <%= f.submit "Send Message" %>
+			      <%= f.submit "Send Message", :class => "button_1" %>
 					<% end %>
 				</article>
 			</div>
