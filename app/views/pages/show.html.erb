@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<section class="home_feature">
+  <div class="wrapper">
+    <article class="main_display">
+      <%= image_tag("display_image_1.jpg") %>
+      <div class="display_gloss"></div>
+      <article class="banner_new">
+        <p>New</p>
+      </article>
+    </article>
+    <article class="feature_text">
+      <h2><%= @page.title %></h2>
+      <p><%= @page.body %></p>
+    </article>
+  </div>
+</section>
+
+<% if @page.title == "Home"%>
+  <ul class="featured_services">
+  	<li class="service_1">
+  		<h3>Web Design</h3>
+  		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere maecenas faucibus mollis interdum.</p>
+  		<div class="button_1"><%= link_to "Find Out More", root_path %></class>
+  	</li>
+  	<li class="service_2">
+  		<h3>Development</h3>
+  		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere maecenas faucibus mollis interdum.</p>
+  		<div class="button_1"><%= link_to "Find Out More", root_path %></class>
+  		
+  	</li>
+  	<li class="service_3">
+  		<h3>Optimization</h3>
+  		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere maecenas faucibus mollis interdum.</p>
+  		<div class="button_1"><%= link_to "Find Out More", root_path %></class>
+  		
+  	</li>
+  </ul>
+
+
+  <div class="wrapper">
+		<article class="about_us_blurb">
+			<h3>About Us</h3>
+			<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Penatibus et magnis dis parturient montes, nascetur ridiculu.</p>
+			<p>Donec sed odio dui. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		</article>
+
+
+		<article class="testimonials">
+			<h3>Testimonials</h3>
+			<div class="testimonial_wrapper">
+				<p class="testimonial_quote">
+					Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. </p>
+				<p class="testimonial_name">John Doe, Company</p>
+			</div>		
+		</article>
+  </div>
+<% end %>

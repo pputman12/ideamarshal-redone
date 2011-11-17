@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ideamarshal</title>
+  <%= stylesheet_link_tag    "styles" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+<header>
+  <div class="wrapper">
+    <h1 class="logo"><%= link_to "IdeaMarshal", root_path %></h1>
+    <ul>
+      <li class="active">
+        <%= link_to "Home", root_path %>
+      </li>
+      <li>
+        <%= link_to "About", page_path("about") %>
+      </li>
+      <li>
+        <%= link_to "Contact", page_path("Contact") %>
+      </li>
+      <li>
+        <%= link_to "Portfolio", page_path("Portfolio") %>
+      </li>
+    </ul>
+  </div>
+</header>
+        
+
+<%= yield %>
+
+	<footer>
+		<div class="wrapper">
+	
+
+			<div class="column">
+				<article class="widget_twitter">
+					<h4>Twitter Updates</h4>
+					<ul>
+						<li><strong>@MediaLoot</strong> Curabitur blandit tempus porttitor estibulum venenatis ultricies.</li>
+						<li><strong>@MediaLoot</strong> Curabitur blandit tempus porttitor estibulum venenatis ultricies.</li>
+						<li><strong>@MediaLoot</strong> Curabitur blandit tempus porttitor estibulum venenatis ultricies.</li>
+					</ul>
+					<div class="button_1">
+					  <%= link_to "Read More", root_path %>
+					</div>
+				</article>
+			</div>
+			
+
+			<div class="column">
+				<article class="widget_newsletter">
+					<h4>Newsletter</h4>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat.</p>
+					<form>
+						<input type="text" value="Email Address">
+						<input type="submit" value="Sign Up">
+					</form>
+				</article>
+				
+				
+				<article class="widget_social">
+					<h4>Social</h4>
+					<ul>
+						<li class="facebook"><%= link_to "FaceBook", root_path %></li>
+						<li class="twitter"><%= link_to "Twitter", root_path %></li>
+						<li class="tumblr"><%= link_to "tumblr", root_path %></li>
+						<li class="behance"><%= link_to "behance", root_path %></li>
+						<li class="linkedin"><%= link_to "linkedin", root_path %></li>
+					</ul>
+				</article>
+			</div>
+			
+			
+			<div class="column">
+				<article class="widget_feedback">
+					<h4>Feedback</h4>
+					<%= form_for(@feedback) do |f| %>
+				    <%= f.text_field :name, :value=>"Your Name" %>
+				    <%= f.text_field :email, :value=>"Your Email"%>
+				    <%= f.text_area :message, :value=>"Your Message"%>
+				    <%= f.submit "Send Message" %>
+					<% end %>
+				</article>
+			</div>
+		
+
+			<p class="copyright_notice">Copyright 2011 &copy; <strong>Idea Marshal</strong>. All Rights Reserved.</p>
+			<div class="logo"><p>IdeaMarshal</p></div>
+			
+		</div>
+	</footer>
+
+</body>
+</html>
